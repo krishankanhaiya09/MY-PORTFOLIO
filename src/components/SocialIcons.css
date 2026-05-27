@@ -1,0 +1,45 @@
+.social-fixed {
+  position: fixed;
+  left: 2rem;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  z-index: 500;
+}
+
+.social-fixed a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text2);
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.social-fixed a:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4);
+}
+
+.social-line {
+  width: 1.5px;
+  height: 80px;
+  background: linear-gradient(180deg, var(--border), transparent);
+}
+
+@media (max-width: 900px) {
+  .social-fixed {
+    display: none;
+  }
+}
